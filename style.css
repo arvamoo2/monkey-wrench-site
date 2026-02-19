@@ -828,3 +828,48 @@ footer p {
     text-align: center;
     width: 100%;
 }
+
+/* --- HEADER INFO CENTER STYLING --- */
+
+.header-info-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.header-status {
+    font-size: 11px;
+    font-weight: 700;
+    color: #2ecc71; /* Green */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.status-dot-small {
+    height: 8px;
+    width: 8px;
+    background: #2ecc71;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #2ecc71;
+    animation: flashPulse 1.5s infinite;
+}
+
+.header-phone {
+    color: var(--yellow);
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+/* Hide center info on very small screens to prevent crowding */
+@media (max-width: 850px) {
+    .header-info-center {
+        display: none;
+    }
+}
