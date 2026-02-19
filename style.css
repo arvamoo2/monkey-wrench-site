@@ -265,3 +265,78 @@ footer p {
     font-size: 1rem;
     margin: 5px 0;
 }
+
+/* --- INTERACTIVE MONKEY ICONS --- */
+
+.header-with-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 25px;
+    padding-bottom: 5px;
+}
+
+.header-with-icon h2 {
+    border-bottom: none; /* Remove old border since container has it */
+    margin-bottom: 0;
+}
+
+.monkey-icon {
+    font-size: 40px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    user-select: none;
+    position: relative;
+    display: inline-block;
+}
+
+.monkey-icon:hover {
+    transform: scale(1.2);
+}
+
+.monkey-icon:active {
+    transform: scale(0.9);
+}
+
+/* Waving Animation */
+.wave-animate {
+    animation: wave 0.5s ease-in-out 3;
+}
+
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-20deg); }
+    75% { transform: rotate(20deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Wrench Spin Animation */
+.wrench {
+    display: inline-block;
+    font-size: 30px;
+    position: absolute;
+    bottom: -5px;
+    right: -10px;
+}
+
+.spin-animate .wrench {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+/* Heart Particles */
+.heart-particle {
+    position: absolute;
+    font-size: 24px;
+    pointer-events: none; /* Let clicks pass through */
+    animation: floatUp 1.5s ease-out forwards;
+}
+
+@keyframes floatUp {
+    0% { opacity: 1; transform: translateY(0) scale(1); }
+    100% { opacity: 0; transform: translateY(-100px) scale(1.5); }
+}
