@@ -709,12 +709,17 @@ footer p {
 
 /* --- SPECIAL "& MORE" CARD STYLING --- */
 
-.special-front {
-    background-color: var(--yellow); /* Makes the card bright yellow */
-    border: 3px dashed #1a2340; /* Adds the dashed navy border */
+/* This forces the & MORE card to span the entire bottom row and pushes it down */
+.more-card {
+    grid-column: 1 / -1; 
+    margin-top: 25px; /* Creates the extra gap from the row above */
 }
 
-/* Adjust the hint text color so it reads clearly on the yellow background */
+.special-front {
+    background-color: var(--yellow); 
+    border: 3px dashed #1a2340; 
+}
+
 .special-front .dark-hint {
     color: #1a2340;
     opacity: 0.8;
