@@ -1,0 +1,96 @@
+:root {
+    --navy: #1a237e;
+    --yellow: #ffe599;
+    --white: #ffffff;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+header {
+    background: var(--navy);
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: var(--yellow);
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.nav-cta {
+    background: var(--yellow);
+    color: var(--navy);
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    transition: 0.3s;
+}
+
+.nav-cta:hover {
+    background: white;
+    transform: scale(1.05);
+}
+
+.hero {
+    height: 70vh;
+    background: linear-gradient(rgba(26, 35, 126, 0.85), rgba(26, 35, 126, 0.85));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(32px, 5vw, 64px);
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.hero-btn {
+    background: var(--yellow);
+    border: none;
+    padding: 15px 40px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+.quote-area {
+    height: 500px;
+    background: #f4f4f4;
+}
