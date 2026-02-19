@@ -10,7 +10,6 @@
 body, html {
     margin: 0;
     padding: 0;
-    /* New engaging font for all body text */
     font-family: 'Montserrat', sans-serif;
     background-color: var(--bg-dark);
     color: var(--text-color);
@@ -69,7 +68,6 @@ nav {
 /* Hero Section */
 .hero {
     height: 65vh;
-    /* Ensures text pops against the background */
     background: linear-gradient(rgba(5, 8, 28, 0.7), rgba(5, 8, 28, 0.7)), url('hero-truck.jpg');
     background-size: cover;
     background-position: center;
@@ -132,15 +130,15 @@ nav {
 .info-block {
     margin-bottom: 50px;
     padding: 50px;
-    background: var(--card-bg); /* Dark Navy Card */
+    background: var(--card-bg); 
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    border: 1px solid #1a2340; /* Subtle border */
+    border: 1px solid #1a2340; 
 }
 
 .info-block h2 {
     font-family: 'Oswald', sans-serif;
-    color: var(--yellow); /* Yellow headings pop on dark bg */
+    color: var(--yellow);
     font-size: 36px;
     margin-top: 0;
     margin-bottom: 25px;
@@ -149,16 +147,15 @@ nav {
     padding-bottom: 5px;
 }
 
-/* NEW: Engaging Font Styling */
 .info-block p {
     font-size: 1.2rem;
     font-weight: 400;
-    color: #e2e8f0; /* Very light grey text */
+    color: #e2e8f0;
 }
 
 .highlight-bg {
-    background: var(--highlight-bg); /* Slightly lighter navy for emphasis */
-    border: 1px solid var(--yellow); /* Yellow border for commitment section */
+    background: var(--highlight-bg); 
+    border: 1px solid var(--yellow); 
 }
 
 /* Feature Grid */
@@ -197,27 +194,26 @@ nav {
     padding: 80px 20px;
     text-align: center;
     border-radius: 16px;
-    border: 2px solid var(--yellow); /* Thinner, cleaner border */
+    border: 2px solid var(--yellow);
     margin-top: 60px;
     position: relative;
     overflow: hidden;
 }
 
-/* The LARGER Badge */
 .quote-badge {
     background: var(--yellow);
     color: #000;
-    padding: 12px 35px; /* Bigger padding */
+    padding: 12px 35px;
     display: inline-flex;
     align-items: center;
     border-radius: 50px;
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
-    font-size: 18px; /* Larger text */
+    font-size: 18px;
     margin-bottom: 30px;
     letter-spacing: 2px;
     box-shadow: 0 0 20px rgba(255, 229, 153, 0.5);
-    transform: scale(1.1); /* Makes it visually larger */
+    transform: scale(1.1);
 }
 
 .live-dot {
@@ -251,7 +247,7 @@ footer {
     padding: 60px 20px;
     margin-top: 0;
     border-top: 1px solid #333;
-    font-family: 'Montserrat', sans-serif; /* Explicitly setting footer font */
+    font-family: 'Montserrat', sans-serif;
 }
 
 .footer-contact {
@@ -264,150 +260,4 @@ footer {
 footer p {
     font-size: 1rem;
     margin: 5px 0;
-}
-
-/* --- INTERACTIVE MONKEY ICONS --- */
-
-.header-with-icon {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 3px solid rgba(255, 255, 255, 0.1);
-    margin-bottom: 25px;
-    padding-bottom: 5px;
-}
-
-.header-with-icon h2 {
-    border-bottom: none; /* Remove old border since container has it */
-    margin-bottom: 0;
-}
-
-.monkey-icon {
-    font-size: 40px;
-    cursor: pointer;
-    transition: transform 0.2s;
-    user-select: none;
-    position: relative;
-    display: inline-block;
-}
-
-.monkey-icon:hover {
-    transform: scale(1.2);
-}
-
-.monkey-icon:active {
-    transform: scale(0.9);
-}
-
-/* Waving Animation */
-.wave-animate {
-    animation: wave 0.5s ease-in-out 3;
-}
-
-@keyframes wave {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(-20deg); }
-    75% { transform: rotate(20deg); }
-    100% { transform: rotate(0deg); }
-}
-
-/* Wrench Spin Animation */
-.wrench {
-    display: inline-block;
-    font-size: 30px;
-    position: absolute;
-    bottom: -5px;
-    right: -10px;
-}
-
-.spin-animate .wrench {
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    100% { transform: rotate(360deg); }
-}
-
-/* Heart Particles */
-.heart-particle {
-    position: absolute;
-    font-size: 24px;
-    pointer-events: none; /* Let clicks pass through */
-    animation: floatUp 1.5s ease-out forwards;
-}
-
-@keyframes floatUp {
-    0% { opacity: 1; transform: translateY(0) scale(1); }
-    100% { opacity: 0; transform: translateY(-100px) scale(1.5); }
-}
-
-/* --- NEW INTERACTIVE SVG ICONS --- */
-
-/* Ensure the parent block handles absolute positioning */
-.relative-block {
-    position: relative;
-    overflow: hidden; /* Ensures the monkey doesn't spill out of the rounded corners */
-}
-
-/* The Monkey SVG Container */
-.monkey-svg-icon {
-    position: absolute;
-    top: -15px; /* Peek over the top edge */
-    right: -15px; /* Peek over the right edge */
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-    z-index: 10; /* Ensure it's above the text background */
-    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.3)); /* Give it depth */
-}
-
-/* Idle Animation: Gentle Bobbing */
-.peering-monkey .monkey-head {
-    animation: idleBob 3s ease-in-out infinite;
-    transform-origin: bottom center;
-}
-
-@keyframes idleBob {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(5px) rotate(2deg); }
-}
-
-/* Hover State: Peek up slightly */
-.peering-monkey:hover .monkey-head {
-    transform: translateY(-10px);
-    transition: transform 0.3s ease-out;
-}
-
-/* CLICK ANIMATION: Pop and Wave Wrench */
-.pop-wave-animate .monkey-head {
-    animation: headPop 0.8s ease-out forwards;
-}
-
-.wrench-hand {
-    opacity: 0; /* Hide wrench initially */
-    transform-origin: bottom right;
-}
-
-.pop-wave-animate .wrench-hand {
-    animation: wrenchWave 1s ease-out forwards;
-}
-
-@keyframes headPop {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-20px) scale(1.1); }
-    100% { transform: translateY(0); }
-}
-
-@keyframes wrenchWave {
-    0% { opacity: 0; transform: translateY(20px) rotate(0deg); }
-    20% { opacity: 1; transform: translateY(-10px) rotate(-20deg); }
-    40% { transform: rotate(10deg); }
-    60% { transform: rotate(-10deg); }
-    80% { transform: rotate(5deg); }
-    100% { opacity: 1; transform: translateY(0) rotate(0deg); }
-}
-
-/* Adjust padding for the info-block so text doesn't hit the monkey */
-.info-block {
-    padding-right: 70px; /* Make room in the top right */
 }
