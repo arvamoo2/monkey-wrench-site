@@ -33,3 +33,9 @@ function dropBananasAndGo() {
         window.location.href = 'dispatch.html';
     }, 800);
 }
+
+// --- FLIP CARD LOGIC ---
+// This function adds or removes the 'is-flipped' class when a card is clicked
+function flipCard(card) {
+    card.classList.toggle('is-flipped');
+}
