@@ -325,3 +325,70 @@ footer p {
     0% { transform: translateY(0) rotate(0deg); opacity: 1; }
     100% { transform: translateY(150px) rotate(180deg); opacity: 0; }
 }
+
+/* --- MASCOT SPLIT LAYOUT --- */
+
+.split-layout {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.reverse-layout {
+    flex-direction: row-reverse;
+}
+
+.text-content {
+    flex: 1; /* Takes up remaining space */
+}
+
+.image-content {
+    flex: 0 0 250px; /* Locks the image area to 250px wide */
+    display: flex;
+    justify-content: center;
+}
+
+/* Master Plumber monkey needs slightly more room because he's standing */
+.why-img-container {
+    flex: 0 0 280px; 
+}
+
+.mascot-img {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 15px 20px rgba(0,0,0,0.4)); /* Makes them pop off the dark background */
+}
+
+/* Premium Floating Animation */
+.float-anim {
+    animation: floating 4s ease-in-out infinite;
+}
+
+.float-anim-delayed {
+    animation: floating 4s ease-in-out infinite 2s; /* Offset so they don't bob in perfect sync */
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Mobile Responsiveness (Stacks them on small screens) */
+@media (max-width: 768px) {
+    .split-layout, .reverse-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .image-content {
+        order: -1; /* Always puts the image ON TOP of the text on mobile */
+        margin-bottom: 30px;
+        width: 200px;
+    }
+    
+    .info-block h2 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
