@@ -161,9 +161,17 @@ nav {
 /* Feature Grid */
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
+    /* We lower the minimum width so it comfortably fits 2 columns next to the image */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Force a perfect 2x2 square on desktop screens */
+@media (min-width: 900px) {
+    .features-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .feature {
@@ -183,8 +191,14 @@ nav {
 .feature h3 {
     font-family: 'Oswald', sans-serif;
     color: var(--yellow);
-    font-size: 24px;
+    font-size: 20px; /* Slightly smaller to fit the 2x2 grid perfectly */
     margin-bottom: 10px;
+    margin-top: 0;
+}
+
+/* Make the Master Plumber monkey slightly larger to balance the 2x2 grid */
+.why-img-container {
+    flex: 0 0 320px; /* Increased from 280px */
 }
 
 /* Quote Section */
