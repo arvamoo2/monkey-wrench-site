@@ -99,9 +99,45 @@
             </div>
             <h2>Get Your Free Quote</h2>
             <p class="quote-subtext">60 Minute Response • Upfront Pricing • No Hidden Fees</p>
-            <div class="form-placeholder">
-                <p>CONTACT FORM LOADING...</p>
+           <section id="quote" class="quote-container">
+            <div class="quote-badge">
+                <div class="live-dot"></div> 24/7 DISPATCH ACTIVE
             </div>
+            <h2>Get Your Free Quote</h2>
+            <p class="quote-subtext">60 Minute Response • Upfront Pricing • No Hidden Fees</p>
+            
+            <form class="custom-contact-form" id="quote-form" action="#" method="POST">
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="input-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="(416) 555-0123">
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="service">Service Needed</label>
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>Select an option...</option>
+                        <option value="emergency">🚨 24/7 Emergency Dispatch</option>
+                        <option value="clog">Drain Cleaning & Clogs</option>
+                        <option value="leak">Leak Detection & Repair</option>
+                        <option value="install">New Fixture Installation</option>
+                        <option value="other">Other Inquiry</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="message">Issue Details</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Describe what's going on..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">GET MY FREE QUOTE</button>
+            </form>
+
         </section>
 
     </main>
