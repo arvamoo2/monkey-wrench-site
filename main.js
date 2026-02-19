@@ -8,21 +8,30 @@ function scrollToQuote() {
     }
 }
 
-// 1. Waving Monkey Logic
-function monkeyWave(element) {
-    element.classList.add('wave-animate');
+// --- NEW INTERACTIVE FUNCTIONS ---
+
+// 1. Peeking Monkey "Pop & Wave" Logic (SVG)
+function monkeyPopWave(element) {
+    // Prevent double-clicking while animating
+    if (element.classList.contains('pop-wave-animate')) return;
+
+    element.classList.add('pop-wave-animate');
+    
     // Remove the class after animation ends so it can be clicked again
     setTimeout(() => {
-        element.classList.remove('wave-animate');
-    }, 1500);
+        element.classList.remove('pop-wave-animate');
+    }, 1200); // Matches longest animation duration
 }
 
-// 2. Heart Release Logic
+// 2. Heart Release Logic (Keep for other sections if needed later)
 function releaseHearts(event) {
-    const monkey = event.target;
+    // Check if the target is the SVG or a path inside it
+    let monkeyContainer = event.target.closest('.monkey-icon-container');
+    if (!monkeyContainer) return;
+
     // Create 5 hearts
     for (let i = 0; i < 5; i++) {
-        createHeart(monkey);
+        createHeart(monkeyContainer);
     }
 }
 
@@ -31,9 +40,9 @@ function createHeart(container) {
     heart.innerHTML = '❤️';
     heart.classList.add('heart-particle');
     
-    // Randomize position slightly
-    const randomX = (Math.random() - 0.5) * 50;
-    const randomY = (Math.random() - 0.5) * 20;
+    // Randomize position slightly around the center of the container
+    const randomX = (Math.random() - 0.5) * 40;
+    const randomY = (Math.random() - 0.5) * 40;
     
     heart.style.left = `calc(50% + ${randomX}px)`;
     heart.style.top = `calc(50% + ${randomY}px)`;
@@ -46,16 +55,19 @@ function createHeart(container) {
     }, 1500);
 }
 
-// 3. Wrench Spin Logic
-function spinWrench(element) {
+// 3. Wrench Spin Logic (Keep for other sections if needed later)
+function spinWrench(event) {
+     let monkeyContainer = event.target.closest('.monkey-icon-container');
+     if (!monkeyContainer) return;
+     
     // Toggle the spin class on/off
-    if (element.classList.contains('spin-animate')) {
-        element.classList.remove('spin-animate');
+    if (monkeyContainer.classList.contains('spin-animate')) {
+        monkeyContainer.classList.remove('spin-animate');
     } else {
-        element.classList.add('spin-animate');
+        monkeyContainer.classList.add('spin-animate');
         // Stop spinning after 2 seconds automatically
         setTimeout(() => {
-            element.classList.remove('spin-animate');
+            monkeyContainer.classList.remove('spin-animate');
         }, 2000);
     }
 }

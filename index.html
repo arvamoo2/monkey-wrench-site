@@ -30,13 +30,28 @@
 
 <main class="container">
         
-        <section class="info-block">
-            <div class="header-with-icon">
-                <h2>Who Are We?</h2>
-                <span class="monkey-icon waving-monkey" onclick="monkeyWave(this)">🐵</span>
-            </div>
+    <section class="info-block relative-block">
+            <svg class="monkey-svg-icon peering-monkey" viewBox="0 0 100 100" onclick="monkeyPopWave(this)">
+                <g class="monkey-head">
+                    <circle cx="20" cy="50" r="15" fill="#8B4513"/> <circle cx="80" cy="50" r="15" fill="#8B4513"/> <circle cx="20" cy="50" r="10" fill="#D2691E"/> <circle cx="80" cy="50" r="10" fill="#D2691E"/> <circle cx="50" cy="55" r="35" fill="#8B4513"/>
+                    <ellipse cx="50" cy="65" rx="25" ry="20" fill="#FFDAB9"/>
+                    <ellipse cx="42" cy="58" rx="5" ry="7" fill="white"/>
+                    <ellipse cx="58" cy="58" rx="5" ry="7" fill="white"/>
+                    <circle cx="42" cy="58" r="3" fill="black"/>
+                    <circle cx="58" cy="58" r="3" fill="black"/>
+                    <circle cx="50" cy="68" r="2" fill="#3E2723"/>
+                    <path d="M 45 75 Q 50 80 55 75" stroke="#3E2723" stroke-width="2" fill="none" stroke-linecap="round"/>
+                </g>
+                <g class="wrench-hand">
+                     <circle cx="85" cy="80" r="12" fill="#8B4513"/>
+                     <path d="M 85 70 L 95 60 L 100 65 L 90 75 Z" fill="silver" stroke="#555" stroke-width="1"/>
+                    <circle cx="85" cy="70" r="5" fill="silver" stroke="#555" stroke-width="1"/>
+                </g>
+            </svg>
+
+            <h2>Who Are We?</h2>
             <p>At Monkey Wrench Plumbing, we believe that professional service shouldn't be a luxury, it should be a standard. Based right here in Toronto, we’ve built our reputation on the idea that when a pipe bursts or a drain clogs, you shouldn't just be looking for a plumber, you shouldn't just be looking for a quick fix—you should be looking for a partner you can trust.</p>
-        </section>
+        </section>    
 
         <section class="info-block highlight-bg">
             <div class="header-with-icon">
