@@ -763,8 +763,8 @@ footer p {
 }
 
 .g-logo {
-    height: 20px;
-    width: auto;
+    height: 22px;
+    width: 22px;
 }
 
 .review-text {
@@ -813,4 +813,18 @@ footer p {
     background: var(--yellow);
     color: #000;
     box-shadow: 0 0 20px rgba(255, 229, 153, 0.3);
+}
+
+/* --- GLOBAL HEADING ALIGNMENT --- */
+.info-block h2 {
+    display: block; /* Allows centering */
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Specifically for sections with monkeys to keep text centered */
+.text-content h2 {
+    text-align: center;
+    width: 100%;
 }
