@@ -506,3 +506,45 @@ footer p {
         padding: 25px 20px;
     }
 }
+
+/* --- CLICKABLE HEADER LOGO --- */
+
+.logo-link {
+    text-decoration: none; /* Removes the underline from the link */
+    transition: transform 0.2s ease;
+}
+
+.logo-link:hover {
+    transform: scale(1.02); /* Very subtle pop when hovering */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Space between monkey and text */
+}
+
+.header-logo-img {
+    height: 40px; /* Adjust this to make the monkey bigger or smaller */
+    width: auto;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.logo-text {
+    color: var(--yellow);
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+/* Mobile tweak: make icon slightly smaller on phones */
+@media (max-width: 600px) {
+    .header-logo-img {
+        height: 30px;
+    }
+    .logo-text {
+        font-size: 18px;
+    }
+}
