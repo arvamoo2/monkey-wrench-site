@@ -695,3 +695,16 @@ footer p {
     line-height: 1.5;
     font-weight: 500;
 }
+
+/* --- SPECIAL "& MORE" CARD STYLING --- */
+
+.special-front {
+    background-color: var(--yellow); /* Makes the card bright yellow */
+    border: 3px dashed #1a2340; /* Adds the dashed navy border */
+}
+
+/* Adjust the hint text color so it reads clearly on the yellow background */
+.special-front .dark-hint {
+    color: #1a2340;
+    opacity: 0.8;
+}
