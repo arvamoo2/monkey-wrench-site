@@ -89,8 +89,8 @@ nav {
 
 /* Engaging Button */
 .emergency-btn {
-    background: var(--yellow);
-    color: #ffffff;
+    background: #ffffff; /* Forces button to be White */
+    color: #000000;      /* Forces text to be Black */
     padding: 18px 45px;
     text-decoration: none;
     font-family: 'Oswald', sans-serif;
@@ -98,26 +98,22 @@ nav {
     border-radius: 50px;
     font-weight: bold;
     letter-spacing: 1px;
-    box-shadow: 0 0 20px rgba(255, 229, 153, 0.3);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
     display: inline-block;
-    transition: all 0.2s ease;
-    animation: pulse 2s infinite;
+    transition: all 0.3s ease;
+    animation: pulse-white 2s infinite;
 }
 
 .emergency-btn:hover {
     transform: translateY(-3px);
-    background: #fff;
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+    background: var(--yellow); /* Turns Monkey Yellow on hover */
+    box-shadow: 0 0 30px rgba(255, 229, 153, 0.4);
 }
 
-.emergency-btn:active {
-    transform: scale(0.95);
-}
-
-@keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(255, 229, 153, 0.4); }
-    70% { box-shadow: 0 0 0 15px rgba(255, 229, 153, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(255, 229, 153, 0); }
+@keyframes pulse-white {
+    0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
 }
 
 /* Dark Mode Content Blocks */
@@ -297,7 +293,8 @@ footer p {
 /* --- BANANA TREE BUTTON --- */
 
 .banana-btn {
-    background: var(--yellow);
+    background: #ffffff; /* Forces the Banana Tree button to be White */
+    color: #000000;      /* Forces text to be Black */
     border: none;
     padding: 15px 40px;
     border-radius: 50px;
@@ -308,16 +305,16 @@ footer p {
     display: inline-flex;
     align-items: center;
     gap: 15px;
-    box-shadow: 0 0 20px rgba(255, 229, 153, 0.3);
-    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
     position: relative;
-    overflow: visible; /* Let bananas fall outside the button! */
+    overflow: visible;
 }
 
 .banana-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
-    background: #fff;
+    background: var(--yellow); /* Switches to Yellow on hover */
+    box-shadow: 0 0 30px rgba(255, 229, 153, 0.4);
 }
 
 .banana-btn:active {
