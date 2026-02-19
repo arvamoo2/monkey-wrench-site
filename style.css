@@ -120,29 +120,20 @@ nav {
     100% { box-shadow: 0 0 0 0 rgba(255, 229, 153, 0); }
 }
 
-/* Dark Mode Content Blocks */
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 60px 20px;
-}
-
 .info-block {
     margin-bottom: 50px;
     padding: 50px;
     background: var(--card-bg); 
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    border: 1px solid #1a2340; 
-    /* NEW: This tells the browser to smoothly animate any changes */
+    /* INCREASED BORDER THICKNESS HERE: */
+    border: 3px solid #1a2340; 
     transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* NEW: The Premium Hover Glow & Lift Effect */
 .info-block:hover {
-    transform: translateY(-8px); /* Lifts the box up smoothly */
-    border-color: var(--yellow); /* Fades the border to Monkey Yellow */
-    /* Adds a deeper shadow below, and a soft yellow glow around the edges */
+    transform: translateY(-8px); 
+    border-color: var(--yellow); 
     box-shadow: 0 20px 40px rgba(0,0,0,0.6), 0 0 20px rgba(255, 229, 153, 0.15); 
 }
 
@@ -165,10 +156,10 @@ nav {
 
 .highlight-bg {
     background: var(--highlight-bg); 
-    border: 1px solid var(--yellow); 
+    /* INCREASED BORDER THICKNESS HERE: */
+    border: 3px solid var(--yellow); 
 }
 
-/* NEW: Extra bright glow for the Commitment section since it is already highlighted */
 .highlight-bg:hover {
     box-shadow: 0 20px 40px rgba(0,0,0,0.6), 0 0 35px rgba(255, 229, 153, 0.35);
 }
