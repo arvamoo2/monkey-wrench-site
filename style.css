@@ -1557,10 +1557,20 @@ footer p {
 /* Styling for the new image inside the Active Emergency block */
 .priority-img {
     width: 100%;
-    height: 180px; /* Fixed height to keep the box compact */
-    object-fit: cover; /* Ensures image fills the space nicely without stretching */
-    border-radius: 8px; /* Matches site's rounded corners */
-    margin-top: 20px; /* Adds space between the text and the photo */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for definition */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Slight depth */
+    height: 180px; /* Keeps the container size predictable */
+    /* CRUCIAL: 'contain' ensures the whole image is shown, never cropped */
+    object-fit: contain; 
+    margin-top: 20px;
+    /* We remove the solid box border and shadow */
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    /* We add the premium "floating" shadow filter instead */
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+    transition: transform 0.3s ease;
+}
+
+/* Adds a slight pop effect when they hover over the emergency box */
+.priority-dispatch-card:hover .priority-img {
+    transform: scale(1.05);
 }
