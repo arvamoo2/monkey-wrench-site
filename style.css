@@ -1016,7 +1016,22 @@ footer p {
 }
 
 .sleek-contact-btn.email {
-    font-size: 18px; /* Slightly smaller so the long email fits on one line */
+    font-size: 18px; 
+}
+
+/* NEW: Image Icon Styling & Color Filter */
+.btn-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    /* This complex filter turns any colored image into your exact --yellow (#ffe599) */
+    filter: brightness(0) saturate(100%) invert(91%) sepia(23%) saturate(740%) hue-rotate(318deg) brightness(105%) contrast(101%);
+    transition: filter 0.3s ease;
+}
+
+/* When hovering, the text turns black, so we force the icons to turn black too! */
+.sleek-contact-btn:hover .btn-icon {
+    filter: brightness(0) saturate(100%);
 }
 
 .sleek-contact-btn:hover {
@@ -1053,10 +1068,11 @@ footer p {
 }
 
 .step-number {
-    background: var(--yellow);
-    color: #000;
+    background: transparent;
+    color: var(--yellow);
+    border: 2px solid var(--yellow);
     font-family: 'Oswald', sans-serif;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 700;
     height: 45px;
     width: 45px;
@@ -1065,6 +1081,15 @@ footer p {
     align-items: center;
     border-radius: 50%;
     flex-shrink: 0;
+    box-shadow: 0 0 15px rgba(255, 229, 153, 0.1);
+    transition: all 0.3s ease;
+}
+
+.step:hover .step-number {
+    background: var(--yellow);
+    color: #000;
+    box-shadow: 0 0 20px rgba(255, 229, 153, 0.4);
+    transform: scale(1.1);
 }
 
 .step-text h3 {
