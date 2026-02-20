@@ -1543,3 +1543,13 @@ footer p {
     height: 28px; /* Slightly larger for homepage */
     width: auto;
 }
+
+/* The New "Active Emergency" Block under the form */
+.priority-dispatch-card {
+    text-align: center;
+    padding: 30px;
+    border: 2px dashed var(--yellow); 
+    background: rgba(255, 229, 153, 0.03); 
+    margin-top: 30px; /* Forces the perfect gap between the form and this box */
+    border-radius: 12px; /* Rounds the corners to match the rest of the site */
+}
