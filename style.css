@@ -219,11 +219,11 @@ nav {
     margin-top: 60px;
     position: relative;
     overflow: hidden;
-    /* NEW: Animation transition */
+    /* Animation transition */
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* NEW: Quote Form Hover Effect */
+/* Quote Form Hover Effect */
 .quote-container:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(0,0,0,0.6), 0 0 30px rgba(255, 229, 153, 0.25);
@@ -1016,22 +1016,7 @@ footer p {
 }
 
 .sleek-contact-btn.email {
-    font-size: 18px; 
-}
-
-/* NEW: Image Icon Styling & Color Filter */
-.btn-icon {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-    /* This complex filter turns any colored image into your exact --yellow (#ffe599) */
-    filter: brightness(0) saturate(100%) invert(91%) sepia(23%) saturate(740%) hue-rotate(318deg) brightness(105%) contrast(101%);
-    transition: filter 0.3s ease;
-}
-
-/* When hovering, the text turns black, so we force the icons to turn black too! */
-.sleek-contact-btn:hover .btn-icon {
-    filter: brightness(0) saturate(100%);
+    font-size: 22px; /* Increased for better visibility without the icon */
 }
 
 .sleek-contact-btn:hover {
@@ -1044,8 +1029,7 @@ footer p {
 /* Make sure the long email doesn't break out of the box on mobile screens */
 @media (max-width: 600px) {
     .sleek-contact-btn.email {
-        font-size: 13px;
-        gap: 8px;
+        font-size: 14.5px; /* Bumped up slightly */
         padding: 15px 10px;
     }
     .sleek-contact-btn.phone {
