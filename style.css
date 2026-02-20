@@ -1442,3 +1442,40 @@ footer p {
         flex-direction: column;
     }
 }
+
+/* --- FINAL POLISH (ACTIVE LINKS & TRUST SIGNALS) --- */
+
+/* Active Link Highlighter */
+.nav-links a.active-link {
+    color: var(--yellow);
+    border-bottom: 2px solid var(--yellow);
+    padding-bottom: 4px;
+}
+
+/* Trust Mini Badge (Under Contact Info) */
+.trust-mini-badge {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #8b9eb0;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.1);
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.trust-mini-badge .stars {
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+/* Privacy Note (Under Form) */
+.privacy-note {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-style: italic;
+}
