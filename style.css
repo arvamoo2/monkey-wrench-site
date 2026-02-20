@@ -1124,10 +1124,14 @@ footer p {
     box-shadow: 0 20px 40px rgba(0,0,0,0.6), 0 0 20px rgba(255, 229, 153, 0.1);
 }
 
-.service-icon-large {
-    font-size: 50px;
-    margin-bottom: 15px;
-    line-height: 1;
+/* Replaces the old icon styling with sleek image styling */
+.service-img {
+    width: 100%;
+    height: 180px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensures image fills the space without stretching */
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .service-detail-card h2 {
