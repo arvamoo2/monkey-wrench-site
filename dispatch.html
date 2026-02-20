@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispatch a Pro | Monkey Wrench Plumbing</title>
+    
+    <link rel="icon" href="header-icon.png" type="image/png">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo-link">
+                <div class="logo-container">
+                    <img src="header-icon.png" alt="Monkey Icon" class="header-logo-img">
+                    <span class="logo-text">MONKEY WRENCH</span>
+                </div>
+            </a>
+
+            <div class="header-info-center">
+                <span class="header-status"><span class="status-dot-small"></span> 24/7 DISPATCH ACTIVE</span>
+                <a href="tel:+14167217325" class="header-phone">416-721-7325</a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dispatch.html">Dispatch!</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="work.html">Our Work</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero dispatch-hero">
+        <div class="hero-content">
+            <div class="quote-badge urgent-badge">
+                <div class="live-dot"></div> EMERGENCY DISPATCH OPEN
+            </div>
+            <h1>Need a Plumber Now?</h1>
+            <p class="hero-subtitle">Fast, reliable service across the GTA. We're ready to roll.</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="dispatch-split">
+            
+            <div class="dispatch-info">
+                <div class="info-block contact-card">
+                    <h2>Direct Contact</h2>
+                    <p>For immediate emergencies, call or text us directly. Our master plumbers are on standby.</p>
+                    
+                    <a href="tel:+14167217325" class="massive-phone-btn">
+                        <span class="phone-icon">📞</span> 416-721-7325
+                    </a>
+                    
+                    <div class="contact-alternatives">
+                        <p><strong>Email:</strong> <a href="mailto:MONKEYWRENCHBIZ@GMAIL.COM">MONKEYWRENCHBIZ@GMAIL.COM</a></p>
+                    </div>
+                </div>
+
+                <div class="info-block process-card">
+                    <h2>How It Works</h2>
+                    <div class="step-list">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-text">
+                                <h3>Reach Out</h3>
+                                <p>Call us or fill out the form. Tell us what's broken, leaking, or clogged.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-text">
+                                <h3>We Dispatch a Pro</h3>
+                                <p>We'll give you an upfront price and send a fully-equipped truck to your door within 60 minutes.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-text">
+                                <h3>Problem Solved</h3>
+                                <p>We fix the issue right the first time, leaving your home clean and your plumbing flawless.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dispatch-form-container">
+                <div class="form-header">
+                    <h2>Book Online</h2>
+                    <p>Not an emergency? Request a quote or schedule a service visit below.</p>
+                </div>
+                
+                <form class="custom-contact-form dispatch-form" id="quote-form" action="YOUR_FORMSPREE_LINK_HERE" method="POST">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        <div class="input-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="(416) 555-0123">
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="service">Service Needed</label>
+                        <select id="service" name="service" required>
+                            <option value="" disabled selected>Select an option...</option>
+                            <option value="emergency">🚨 24/7 Emergency Dispatch</option>
+                            <option value="clog">Drain Cleaning & Clogs</option>
+                            <option value="leak">Leak Detection & Repair</option>
+                            <option value="install">New Fixture Installation</option>
+                            <option value="other">Other Inquiry</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="message">Issue Details</label>
+                        <textarea id="message" name="message" rows="4" required placeholder="Describe what's going on..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn dispatch-submit">DISPATCH MY PRO</button>
+                </form>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-cta-container">
+            <p class="footer-contact">CALL OR TEXT: +1-416-721-7325</p>
+        </div>
+        <div class="footer-bottom">
+            <p>Proudly Serving the GTA | Fully Licensed & Insured</p>
+            <p>Locally owned and operated by Arvin Amoukarami.</p>
+            <p>© 2026 Monkey Wrench Plumbing</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
