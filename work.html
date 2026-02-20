@@ -44,18 +44,21 @@
 
     <main class="container">
         
-        <div class="ba-container">
+      <div class="ba-container">
             
             <div class="ba-card">
-                <div class="ba-image-split">
-                    <div class="ba-half">
-                        <img src="before-drain.png" alt="Clogged Drain" class="ba-img">
-                        <span class="ba-badge left-badge">BEFORE</span>
+                <div class="image-comparison">
+                    <img src="after-drain.png" alt="Clean Drain" class="img-after">
+                    <img src="before-drain.png" alt="Clogged Drain" class="img-before">
+                    
+                    <input type="range" min="0" max="100" value="50" class="comparison-slider">
+                    
+                    <div class="slider-line">
+                        <div class="slider-icon">↔</div>
                     </div>
-                    <div class="ba-half">
-                        <img src="after-drain.png" alt="Clean Drain" class="ba-img">
-                        <span class="ba-badge right-badge">AFTER</span>
-                    </div>
+
+                    <span class="ba-badge left-badge">BEFORE</span>
+                    <span class="ba-badge right-badge">AFTER</span>
                 </div>
                 <div class="ba-text">
                     <h2>FULL FLOW RESTORED</h2>
@@ -64,15 +67,18 @@
             </div>
 
             <div class="ba-card">
-                <div class="ba-image-split">
-                    <div class="ba-half">
-                        <img src="before-faucet.png" alt="Rusted Faucet" class="ba-img">
-                        <span class="ba-badge left-badge">BEFORE</span>
+                <div class="image-comparison">
+                    <img src="after-faucet.png" alt="Modern Faucet" class="img-after">
+                    <img src="before-faucet.png" alt="Rusted Faucet" class="img-before">
+                    
+                    <input type="range" min="0" max="100" value="50" class="comparison-slider">
+                    
+                    <div class="slider-line">
+                        <div class="slider-icon">↔</div>
                     </div>
-                    <div class="ba-half">
-                        <img src="after-faucet.png" alt="Modern Faucet" class="ba-img">
-                        <span class="ba-badge right-badge">AFTER</span>
-                    </div>
+
+                    <span class="ba-badge left-badge">BEFORE</span>
+                    <span class="ba-badge right-badge">AFTER</span>
                 </div>
                 <div class="ba-text">
                     <h2>MODERN UPGRADES</h2>
@@ -91,7 +97,9 @@
         <div class="work-gallery-grid">
             
             <div class="work-card">
-                <img src="work-toilet.png" alt="Modern Fixture Setup" class="work-img">
+                <div class="work-img-container">
+                    <img src="work-toilet.png" alt="Modern Fixture Setup" class="work-img">
+                </div>
                 <div class="work-text">
                     <h3>MODERN FIXTURE SETUP</h3>
                     <p>High-efficiency toilet installations with a focus on cleanliness and a perfect seal.</p>
@@ -99,7 +107,9 @@
             </div>
 
             <div class="work-card">
-                <img src="work-pipes.png" alt="Precision Pipework" class="work-img">
+                <div class="work-img-container">
+                    <img src="work-pipes.png" alt="Precision Pipework" class="work-img">
+                </div>
                 <div class="work-text">
                     <h3>PRECISION PIPEWORK</h3>
                     <p>Neatly routed drainage and supply lines to maximize your cabinet space and prevent leaks.</p>
@@ -107,7 +117,9 @@
             </div>
 
             <div class="work-card">
-                <img src="work-sump.png" alt="Basement Protection" class="work-img">
+                <div class="work-img-container">
+                    <img src="work-sump.png" alt="Basement Protection" class="work-img">
+                </div>
                 <div class="work-text">
                     <h3>BASEMENT PROTECTION</h3>
                     <p>Heavy-duty sump pump installs to keep your basement dry through any storm.</p>
@@ -115,7 +127,9 @@
             </div>
 
             <div class="work-card">
-                <img src="work-tankless.png" alt="Tankless Water Heater" class="work-img">
+                <div class="work-img-container">
+                    <img src="work-tankless.png" alt="Tankless Water Heater" class="work-img">
+                </div>
                 <div class="work-text">
                     <h3>TANKLESS WATER HEATER</h3>
                     <p>Endless hot water and lower bills. Expertly piped for performance.</p>
@@ -123,7 +137,9 @@
             </div>
 
             <div class="work-card">
-                <img src="work-truck.png" alt="Local and Reliable" class="work-img">
+                <div class="work-img-container">
+                    <img src="work-truck.png" alt="Local and Reliable" class="work-img">
+                </div>
                 <div class="work-text">
                     <h3>LOCAL AND RELIABLE</h3>
                     <p>Fully equipped and ready to roll. We're in your neighbourhood 24/7 for fast emergency response.</p>
@@ -131,7 +147,9 @@
             </div>
 
             <div class="work-card">
-                <img src="work-copper.png" alt="Expert Craftsmanship" class="work-img">
+                <div class="work-img-container">
+                    <img src="work-copper.png" alt="Expert Craftsmanship" class="work-img">
+                </div>
                 <div class="work-text">
                     <h3>EXPERT CRAFTSMANSHIP</h3>
                     <p>It's all in the details. We take pride in clean, industrial grade soldering that lasts a lifetime.</p>
@@ -159,6 +177,17 @@
         </div>
     </footer>
 
+  <script>
+        // Interactive Slider Logic
+        document.querySelectorAll('.comparison-slider').forEach(slider => {
+            slider.addEventListener('input', (e) => {
+                const val = e.target.value;
+                const container = e.target.parentElement;
+                container.querySelector('.img-before').style.clipPath = `inset(0 ${100 - val}% 0 0)`;
+                container.querySelector('.slider-line').style.left = `${val}%`;
+            });
+        });
+    </script>
     <script src="main.js"></script>
 </body>
-</html>
+</html> 

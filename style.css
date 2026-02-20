@@ -1254,23 +1254,62 @@ footer p {
     flex-direction: column;
 }
 
-.ba-image-split {
-    display: flex;
-    gap: 5px; /* Slight gap between before and after */
+/* INTERACTIVE SLIDER STYLING */
+.image-comparison {
+    position: relative;
+    width: 100%;
+    height: 350px;
     border-radius: 8px;
     overflow: hidden;
+    background: #000;
 }
 
-.ba-half {
-    flex: 1;
-    position: relative;
-}
-
-.ba-img {
-    width: 100%;
-    height: 250px;
+.img-after, .img-before {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     object-fit: cover;
-    display: block;
+}
+
+.img-before {
+    clip-path: inset(0 50% 0 0); /* Hides right half initially */
+}
+
+.comparison-slider {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    opacity: 0; /* Invisible but draggable */
+    z-index: 10;
+    cursor: ew-resize;
+}
+
+.slider-line {
+    position: absolute;
+    top: 0; left: 50%;
+    width: 4px; height: 100%;
+    background: var(--yellow);
+    z-index: 5;
+    pointer-events: none; /* Allows dragging through it */
+    transform: translateX(-50%);
+    box-shadow: 0 0 15px rgba(0,0,0,0.8);
+}
+
+.slider-icon {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45px; height: 45px;
+    background: var(--yellow);
+    color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 22px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.8);
+    border: 3px solid #000;
 }
 
 .ba-badge {
@@ -1286,15 +1325,12 @@ footer p {
     border-radius: 4px;
     letter-spacing: 1px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.8);
+    z-index: 5;
+    pointer-events: none;
 }
 
-.left-badge {
-    left: 15px;
-}
-
-.right-badge {
-    right: 15px;
-}
+.left-badge { left: 15px; }
+.right-badge { right: 15px; }
 
 .ba-text {
     text-align: center;
@@ -1316,7 +1352,7 @@ footer p {
     margin: 0;
 }
 
-/* Custom Divider (Matches the one in your screenshot) */
+/* Custom Divider */
 .section-divider {
     display: flex;
     align-items: center;
@@ -1350,20 +1386,33 @@ footer p {
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 12px;
     overflow: hidden;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 .work-card:hover {
     transform: translateY(-8px);
     border-color: var(--yellow);
     background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* NEW: Cinematic Image Zoom on Hover */
+.work-img-container {
+    width: 100%;
+    height: 240px;
+    overflow: hidden; /* Keeps the zooming image inside the box */
 }
 
 .work-img {
     width: 100%;
-    height: 240px;
+    height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.6s ease; /* Smooth zoom animation */
+}
+
+.work-card:hover .work-img {
+    transform: scale(1.08); /* Zooms in slightly */
 }
 
 .work-text {
