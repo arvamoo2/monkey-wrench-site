@@ -45,7 +45,7 @@
         </div>
     </section>
 
-    <main class="container">
+<main class="container">
         <div class="dispatch-split">
             
             <div class="dispatch-info">
@@ -94,7 +94,7 @@
                     </div>
                 </div>
 
-           <div class="info-block guarantee-card">
+                <div class="info-block guarantee-card">
                     <h2>Our Promise</h2>
                     <ul class="guarantee-list">
                         <li><strong>Licensed & Insured:</strong> Fully certified professionals.</li>
@@ -102,57 +102,66 @@
                         <li><strong>Clean Home:</strong> We leave your space spotless.</li>
                     </ul>
                 </div>
-
             </div>
-            <div class="dispatch-form-container">
-                <div class="form-header">
-                    <h2>Book Online</h2>
-                    <p>Not an emergency? Request a quote or schedule a service visit below.</p>
-                </div>
+
+            <div class="dispatch-right-side">
                 
-                <form class="custom-contact-form dispatch-form" id="quote-form" action="YOUR_FORMSPREE_LINK_HERE" method="POST">
-                    <div class="form-row">
-                        <div class="input-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                <div class="dispatch-form-container">
+                    <div class="form-header">
+                        <h2>Book Online</h2>
+                        <p>Not an emergency? Request a quote or schedule a service visit below.</p>
+                    </div>
+                    
+                    <form class="custom-contact-form dispatch-form" id="quote-form" action="YOUR_FORMSPREE_LINK_HERE" method="POST">
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required placeholder="John Doe">
+                            </div>
+                            <div class="input-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="(416) 555-0123">
+                            </div>
                         </div>
+                        
                         <div class="input-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" required placeholder="(416) 555-0123">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
                         </div>
-                    </div>
-                    
-                    <div class="input-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required placeholder="john@example.com">
-                    </div>
-                    
-                    <div class="input-group">
-                        <label for="service">Service Needed</label>
-                        <select id="service" name="service" required>
-                            <option value="" disabled selected>Select an option...</option>
-                            <option value="emergency">🚨 24/7 Emergency Dispatch</option>
-                            <option value="clog">Drain Cleaning & Clogs</option>
-                            <option value="leak">Leak Detection & Repair</option>
-                            <option value="install">New Fixture Installation</option>
-                            <option value="other">Other Inquiry</option>
-                        </select>
-                    </div>
-                    
-                    <div class="input-group">
-                        <label for="message">Issue Details</label>
-                        <textarea id="message" name="message" rows="4" required placeholder="Describe what's going on..."></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn dispatch-submit">DISPATCH MY PRO</button>
-                    
-                    <p class="privacy-note">🔒 Your information is 100% secure and will never be shared.</p>
-                </form>
+                        
+                        <div class="input-group">
+                            <label for="service">Service Needed</label>
+                            <select id="service" name="service" required>
+                                <option value="" disabled selected>Select an option...</option>
+                                <option value="emergency">🚨 24/7 Emergency Dispatch</option>
+                                <option value="clog">Drain Cleaning & Clogs</option>
+                                <option value="leak">Leak Detection & Repair</option>
+                                <option value="install">New Fixture Installation</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="message">Issue Details</label>
+                            <textarea id="message" name="message" rows="4" required placeholder="Describe what's going on..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn dispatch-submit">DISPATCH MY PRO</button>
+                        
+                        <p class="privacy-note">🔒 Your information is 100% secure and will never be shared.</p>
+                    </form>
+                </div>
+
+                <div class="info-block priority-dispatch-card">
+                    <h2>Active Emergency?</h2>
+                    <p>If you are experiencing an active leak, flooding, or severe backup, please skip the form. Call our rapid-response team directly so we can dispatch a truck immediately.</p>
+                </div>
+
             </div>
             
         </div>
     </main>
-
+    
     <footer>
         <div class="footer-cta-container">
             <p class="footer-contact">CALL OR TEXT: +1-416-721-7325</p>
