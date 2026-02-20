@@ -1089,3 +1089,125 @@ footer p {
         width: 100%;
     }
 }
+
+/* --- SERVICES PAGE STYLING --- */
+
+.services-hero {
+    height: 40vh;
+    /* Keeps the dark blue overlay but gives it a slightly different tone */
+    background: linear-gradient(rgba(10, 15, 40, 0.85), rgba(5, 8, 28, 0.95)), url('hero-truck.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.services-page-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: -20px; /* Pulls it up slightly closer to the hero */
+}
+
+.service-detail-card {
+    background: var(--card-bg);
+    padding: 40px 30px;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-detail-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--yellow);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6), 0 0 20px rgba(255, 229, 153, 0.1);
+}
+
+.service-icon-large {
+    font-size: 50px;
+    margin-bottom: 15px;
+    line-height: 1;
+}
+
+.service-detail-card h2 {
+    font-family: 'Oswald', sans-serif;
+    color: var(--white);
+    font-size: 26px;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.service-divider {
+    height: 3px;
+    width: 50px;
+    background: var(--yellow);
+    margin: 15px 0;
+}
+
+.service-detail-card p {
+    color: #b0bec5;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1; /* Pushes the link to the bottom so cards align nicely */
+}
+
+.service-link {
+    color: var(--yellow);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.service-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* MASSIVE CTA AT BOTTOM */
+.massive-cta-section {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    padding: 50px 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 16px;
+    border: 1px dashed rgba(255, 229, 153, 0.3);
+}
+
+.massive-cta-section h2 {
+    font-family: 'Oswald', sans-serif;
+    color: var(--white);
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.massive-cta-section p {
+    color: #888;
+    margin-bottom: 30px;
+}
+
+.massive-dispatch-btn-alt {
+    display: inline-block;
+    background: var(--yellow);
+    color: #000;
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 20px 50px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(255, 229, 153, 0.3);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.massive-dispatch-btn-alt:hover {
+    transform: translateY(-5px) scale(1.02);
+    background: #fff;
+    box-shadow: 0 15px 35px rgba(255, 255, 255, 0.4);
+}
