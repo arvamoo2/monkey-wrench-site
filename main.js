@@ -8,16 +8,6 @@ function scrollToQuote() {
     }
 }
 
-console.log("Monkey Wrench Site Loaded Successfully!");
-
-// Function to scroll to quote section
-function scrollToQuote() {
-    const quoteSection = document.getElementById('quote');
-    if(quoteSection) {
-        quoteSection.scrollIntoView({ behavior: 'smooth' });
-    }
-}
-
 // --- BANANA TREE REDIRECT LOGIC ---
 function dropBananasAndGo() {
     const btn = document.querySelector('.banana-btn');

@@ -3,12 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monkey Wrench Plumbing | 24/7 GTA Service</title>
+    <title>Monkey Wrench Plumbing | 24/7 Emergency Plumber in Toronto & GTA</title>
     
-   <link rel="icon" href="favicon.png" type="image/png"> 
+    <meta name="description" content="Toronto's premier 24/7 emergency plumbing service. Fast dispatch, upfront pricing, and a Clean Home Guarantee. Serving Toronto, Peel, York, and Durham.">
+    <meta name="keywords" content="plumber Toronto, emergency plumber GTA, drain cleaning, leak repair, 24/7 plumber near me">
     
+    <meta property="og:title" content="Monkey Wrench Plumbing | 24/7 GTA Service">
+    <meta property="og:description" content="Fast, reliable emergency plumbing across the GTA. Dispatch a truck now.">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="favicon.png" type="image/png"> 
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Plumber",
+      "name": "Monkey Wrench Plumbing",
+      "image": "https://monkey-wrench-site.vercel.app/header-icon.png",
+      "url": "https://monkey-wrench-site.vercel.app/",
+      "telephone": "+14167217325",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Toronto",
+        "addressRegion": "ON",
+        "addressCountry": "CA"
+      },
+      "areaServed": ["Toronto", "Mississauga", "Brampton", "Vaughan", "Markham", "Oakville", "Durham Region"],
+      "openingHours": "Mo-Su 00:00-23:59"
+    }
+    </script>
 </head>
 <body>
 
@@ -37,7 +63,7 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Monkey Wrench Plumbing</h1>
+            <h1>24/7 Emergency Plumber in Toronto</h1>
             
             <button class="banana-btn" onclick="dropBananasAndGo()">
                 <span class="tree-container">
@@ -269,20 +295,20 @@
             
          <form class="custom-contact-form" id="quote-form" action="https://formspree.io/f/xykddwlk" method="POST">
                 <div class="form-row">
-                    <div class="input-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required placeholder="John Doe">
-                    </div>
-                    <div class="input-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" required placeholder="(416) 555-0123">
-                    </div>
-                </div>
-                
-                <div class="input-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required placeholder="john@example.com">
-                </div>  
+                            <div class="input-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required placeholder="John Doe" autocomplete="name">
+                            </div>
+                            <div class="input-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="(416) 555-0123" autocomplete="tel">
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com" autocomplete="email">
+                        </div>
                 
                 <div class="input-group">
                     <label for="service">Service Needed</label>
