@@ -73,10 +73,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 });
                 
                 if (response.ok) {
-                    // SUCCESS! Replace the form with a sleek confirmation message
+                // SUCCESS! Replace the form with a sleek confirmation message
                     form.innerHTML = `
                         <div style="text-align: center; padding: 40px 20px;">
-                            <h3 style="color: #ffe599; font-family: 'Oswald', sans-serif; font-size: 34px; margin-bottom: 15px; letter-spacing: 1px;">REQUEST RECEIVED! 🛠️</h3>
+                            <h3 style="color: #ffe599; font-family: 'Oswald', sans-serif; font-size: 34px; margin-bottom: 15px; letter-spacing: 1px; display: flex; align-items: center; justify-content: center; gap: 15px;">
+                                REQUEST RECEIVED! 
+                                <img src="gears-turning.gif" alt="Processing" style="height: 45px; width: auto;">
+                            </h3>
                             <p style="color: #d1d5db; font-size: 1.1rem; line-height: 1.6;">Thanks for reaching out. Our dispatch team has your information and will be in touch shortly.</p>
                         </div>
                     `;
